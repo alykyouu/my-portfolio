@@ -1,77 +1,49 @@
-// Scroll reveal animation
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) {
-      setTimeout(() => e.target.classList.add('visible'), i * 60);
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1 });
-reveals.forEach(r => observer.observe(r));
 
-// Skill bars animation
-const skillObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('.skill-bar-fill').forEach(bar => {
-        const width = bar.getAttribute('data-width');
-        bar.style.width = width + '%';
-      });
-      skillObs.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
+// MOBILE NAVIGATION
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-const skillsSection = document.getElementById('skills');
-if (skillsSection) skillObs.observe(skillsSection);
+menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("show");
 
-// Active nav link highlighting
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.innerHTML = isOpen
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+});
 
-function updateActiveNav() {
-  let current = '';
-  sections.forEach(s => {
-    const sectionTop = s.offsetTop - 120;
-    const sectionBottom = sectionTop + s.offsetHeight;
-    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
-      current = s.getAttribute('id');
-    }
-  });
-  
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href').substring(1);
-    if (href === current) {
-      link.style.color = 'var(--red-light)';
-    } else {
-      link.style.color = '';
-    }
-  });
-}
+// CLOSE MENU WHEN A LINK IS CLICKED
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    });
+});
 
-// Initial call and event listener for active nav
-updateActiveNav();
-window.addEventListener('scroll', updateActiveNav);
+// AUTOMATIC FOOTER YEAR
+document.getElementById("year").textContent = new Date().getFullYear();
 
-// Contact form send button functionality
-const sendBtn = document.getElementById('sendMessageBtn');
-if (sendBtn) {
-  sendBtn.addEventListener('click', function() {
-    const name = document.getElementById('name')?.value || '';
-    const email = document.getElementById('email')?.value || '';
-    const subject = document.getElementById('subject')?.value || '';
-    const message = document.getElementById('message')?.value || '';
-    
-    if (name && email && message) {
-      alert('✨ Thank you for your message, ' + name + '! I will get back to you soon.');
-      // Optional: Clear form fields
-      document.getElementById('name').value = '';
-      document.getElementById('email').value = '';
-      document.getElementById('subject').value = '';
-      document.getElementById('message').value = '';
-    } else {
-      alert('Please fill in your name, email, and message before sending.');
-    }
-  });
-}
+// ACTIVE NAVIGATION LINK
+const sections = document.querySelectorAll("main section[id]");
+const navigationLinks = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+    let currentSection = "home";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+            currentSection = section.id;
+        }
+    });
+
+    navigationLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + currentSection) {
+            link.classList.add("active");
+        }
+    });
+});
