@@ -1,263 +1,346 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Dark Bloom | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio of a Bachelor of Science in Information Technology student and aspiring developer.">
+    <title>My Portfolio | IT Student Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<nav>
-  <a href="#hero" class="nav-logo">Portfolio</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <!-- NAVIGATION -->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">K<span>.</span></a>
 
-<section id="hero">
-  <div class="hero-bg-lines"></div>
-  <div class="hero-circle"></div>
-  <div class="corner-deco corner-tl"></div>
-  <div class="corner-deco corner-tr"></div>
-  <div class="corner-deco corner-bl"></div>
-  <div class="corner-deco corner-br"></div>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
 
-  <p class="hero-tag">Welcome to my portfolio</p>
-  <h1 class="hero-name">Kyla <span>Paler</h1>
-  <p class="hero-title">Web Developer &nbsp;·&nbsp; Designer &nbsp;·&nbsp; Creator</p>
-  <div class="hero-divider"></div>
-  <p class="hero-bio">
-    A passionate web development student dedicated to crafting elegant, functional, and meaningful digital experiences.
-  </p>
-  <div class="hero-cta">
-    <a href="#projects" class="btn-primary">View My Work</a>
-    <a href="#contact" class="btn-outline">Get in Touch</a>
-  </div>
-</section>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact" class="contact-link">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section id="about">
-  <p class="section-label reveal">Introduction</p>
-  <h2 class="section-title reveal">About Me</h2>
-  <div class="section-divider reveal"></div>
+    <main>
+        <!-- HOME -->
+        <section class="hero section" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow"><span></span> WELCOME TO MY PORTFOLIO</p>
 
-  <div class="about-grid">
-    <div class="about-photo-wrap reveal">
-      <div class="about-photo-frame">
-        <span class="photo-initials">YN</span>
-        <span class="photo-placeholder-text">Replace with your photo</span>
-      </div>
-    </div>
+                    <h1>Hello, I'm <span class="gradient-text">Kyla Paler</span></h1>
 
-    <div class="about-text reveal">
-      <p>
-        Hello! I am a dedicated student of Web System Technologies with a profound passion for building beautiful and functional websites. My journey in web development has equipped me with a diverse set of technical skills and a keen eye for design.
-      </p>
-      <p>
-        I believe in writing clean, efficient code and creating user experiences that leave a lasting impression. Every project I undertake is an opportunity to learn, grow, and push the boundaries of what is possible on the web.
-      </p>
-      <p>
-        When I am not coding, I immerse myself in design inspiration, continuously evolving my craft and staying current with the latest technologies and trends in web development.
-      </p>
+                    <h2>BSIT Student | Aspiring Developer</h2>
 
-      <ul class="contact-list">
-        <li><span class="label">Name</span> Kyla Paler</li>
-        <li><span class="label">Email</span> paler.kyla10@gmail.com</li>
-        <li><span class="label">Phone</span> +63 926 165 8813</li>
-        <li><span class="label">Location</span> Cagayan de Oro, Philippines</li>
-        <li><span class="label">Course</span> Web Systems / Year 3</li>
-      </ul>
-    </div>
-  </div>
-</section>
+                    <p class="hero-description">
+                        I am a Bachelor of Science in Information Technology student
+                        passionate about web development, software development,
+                        and exploring new technologies.
+                    </p>
 
-<section id="skills">
-  <p class="section-label reveal">What I Know</p>
-  <h2 class="section-title reveal">My Skills</h2>
-  <div class="section-divider reveal"></div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore My Projects <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
 
-  <div class="skills-grid">
-    <div class="skill-card reveal">
-      <div class="skill-icon">&#60;/&#62;</div>
-      <p class="skill-name">HTML5</p>
-      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
-      <p class="skill-percent">90%</p>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-icon">&#9670;</div>
-      <p class="skill-name">CSS3</p>
-      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
-      <p class="skill-percent">85%</p>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-icon">JS</div>
-      <p class="skill-name">JavaScript</p>
-      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
-      <p class="skill-percent">75%</p>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-icon">&#8801;</div>
-      <p class="skill-name">Bootstrap</p>
-      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
-      <p class="skill-percent">80%</p>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-icon">&#9673;</div>
-      <p class="skill-name">React</p>
-      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div>
-      <p class="skill-percent">60%</p>
-    </div>
-    <div class="skill-card reveal">
-      <div class="skill-icon">&#9651;</div>
-      <p class="skill-name">Git &amp; GitHub</p>
-      <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
-      <p class="skill-percent">70%</p>
-    </div>
-  </div>
-</section>
+                    <div class="social-links">
+                        <a href="https://github.com/alykyouu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:paler.kyla10@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
 
-<section id="projects">
-  <p class="section-label reveal">My Work</p>
-  <h2 class="section-title reveal">Projects</h2>
-  <div class="section-divider reveal"></div>
+                <div class="hero-image">
+                    <div class="image-frame">
+                        <div class="profile-placeholder">
+                            <i class="fas fa-user-graduate"></i>
+                            <p>YOUR PHOTO</p>
+                        </div>
+                    </div>
+                    <div class="floating-tag">
+                        <i class="fas fa-code"></i> Learning & Building
+                    </div>
+                </div>
+            </div>
 
-  <div class="projects-grid">
-    <div class="project-card reveal">
-      <div class="project-thumb">
-        <span class="project-thumb-num">01</span>
-        <span class="project-tag">Projects</span>
-      </div>
-      <div class="project-body">
-        <h3 class="project-title">Flower Shop Reservation System</h3>
-        <p class="project-desc">A full-stack digital Flower shop Reservation platform with user authentication.</p>
-        <div class="project-tech">
-          <span class="tech-tag">HTML</span>
-          <span class="tech-tag">CSS</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">Firebase</span>
+            <div class="hero-bottom container">
+                <span>SCROLL TO EXPLORE</span>
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">GET TO KNOW ME</p>
+                    <h2>About <span class="gradient-text">Me</span></h2>
+                    <p>A little introduction about my journey in technology.</p>
+                </div>
+
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+
+                    <div class="about-text">
+                        <h3>Who Am I?</h3>
+                        <p>
+                            Hello! I am a Bachelor of Science in Information Technology
+                            student at STI College. I have an interest in technology,
+                            web development, and software development.
+                        </p>
+                        <p>
+                            Throughout my academic journey, I have gained experience
+                            in creating websites, developing systems, managing
+                            databases, and exploring different technologies.
+                            I enjoy learning new skills, solving problems, and
+                            collaborating with others to create useful projects.
+                        </p>
+                        <p>
+                            My goal is to continuously improve my technical abilities
+                            and become a skilled IT professional.
+                        </p>
+
+                        <div class="about-details">
+                            <div><i class="fas fa-graduation-cap"></i> BS Information Technology</div>
+                            <div><i class="fas fa-map-marker-alt"></i> Cagayan de Oro City, Philippines</div>
+                            <div><i class="fas fa-code"></i> Aspiring Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section section-alt" id="skills">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">WHAT I WORK WITH</p>
+                    <h2>My Technical <span class="gradient-text">Skills</span></h2>
+                    <p>Technologies and tools I have learned and explored.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML</h3>
+                        <p>Web Structure</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-css3-alt"></i>
+                        <h3>CSS</h3>
+                        <p>Web Styling</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-js"></i>
+                        <h3>JavaScript</h3>
+                        <p>Web Interactivity</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-php"></i>
+                        <h3>PHP</h3>
+                        <p>Backend Development</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-laravel"></i>
+                        <h3>Laravel</h3>
+                        <p>Web Framework</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-react"></i>
+                        <h3>React</h3>
+                        <p>Frontend Development</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database"></i>
+                        <h3>MySQL</h3>
+                        <p>Database Management</p>
+                    </div>
+  
+                    <div class="skill-card">
+                        <i class="fab fa-node-js"></i>
+                        <h3>Node.js</h3>
+                        <p>Backend Development</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Unity</h3>
+                        <p>Game Development</p>
+                    </div>
+                   
+                    <div class="skill-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <p>Version Control</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">MY WORK</p>
+                    <h2>Featured <span class="gradient-text">Projects</span></h2>
+                    <p>Some of my academic and development projects.</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-visual project-one">
+                            <i class="fas fa-money-check-alt"></i>
+                            <span>01 / SYSTEM DEVELOPMENT</span>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-category">ACADEMIC PROJECT</p>
+                            <h3>PROJECT PACE</h3>
+                            <p>
+                                A Payroll and Installment Payment Monitoring System
+                                designed to organize payroll records and help customers
+                                monitor their installment payments.
+                            </p>
+                            <div class="tech-tags">
+                                <span>PHP</span><span>Laravel</span><span>MySQL</span>
+                            </div>
+                            <span class="project-status">Academic Project</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-visual project-two">
+                            <i class="fas fa-hamburger"></i>
+                            <span>02 / WEB DEVELOPMENT</span>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-category">PRACTICE PROJECT</p>
+                            <h3>Subway-Inspired Ordering System</h3>
+                            <p>
+                                A food ordering practice project focused on customer
+                                interactions, product displays, and database management.
+                            </p>
+                            <div class="tech-tags">
+                                <span>Laravel</span><span>React Native</span><span>MySQL</span>
+                            </div>
+                            <span class="project-status">Practice Project</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-visual project-three">
+                            <i class="fas fa-gamepad"></i>
+                            <span>03 / GAME DEVELOPMENT</span>
+                        </div>
+                        <div class="project-info">
+                            <p class="project-category">ACADEMIC PROJECT</p>
+                            <h3>SIGNPOP</h3>
+                            <p>
+                                A Unity game development project focused on game flow,
+                                asset preparation, and interactive gameplay logic.
+                            </p>
+                            <div class="tech-tags">
+                                <span>Unity</span><span>C#</span><span>Game Design</span>
+                            </div>
+                            <span class="project-status">Academic Project</span>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- RESUME -->
+        <section class="section section-alt" id="resume">
+            <div class="container">
+                <div class="resume-card">
+                    <div>
+                        <p class="eyebrow">MY BACKGROUND</p>
+                        <h2>Interested in my <span class="gradient-text">Resume?</span></h2>
+                        <p>
+                            Learn more about my educational background, technical
+                            skills, and academic experiences.
+                        </p>
+                    </div>
+                    <a href="resume.pdf" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="eyebrow">LET'S CONNECT</p>
+                    <h2>Get In <span class="gradient-text">Touch</span></h2>
+                    <p>Feel free to contact me for opportunities, collaborations, or inquiries.</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:paler.kyla10@gmail.com">paler.kyla10@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/alykyouu" target="_blank" rel="noopener noreferrer">
+                                Visit My GitHub
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Cagayan de Oro City, Philippines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <a href="#home" class="logo">K<span>.</span></a>
+            <p>Designed and developed with passion.</p>
+            <p class="copyright">
+                &copy; <span id="year"></span> Kyla Paler. All Rights Reserved.
+            </p>
         </div>
-      </div>
-    </div>
+    </footer>
 
-    <div class="project-card reveal">
-      <div class="project-thumb">
-        <span class="project-thumb-num">02</span>
-        <span class="project-tag">Capstone</span>
-      </div>
-      <div class="project-body">
-        <h3 class="project-title">Payroll and Installment Management</h3>
-        <p class="project-desc">Responsive e-commerce frontend inspired by modern design systems. Implemented interactive product grids and dynamic cart preview.</p>
-        <div class="project-tech">
-          <span class="tech-tag">CSS3</span>
-          <span class="tech-tag">Bootstrap</span>
-          <span class="tech-tag">jQuery</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card reveal">
-      <div class="project-thumb">
-        <span class="project-thumb-num">03</span>
-        <span class="project-tag">Projects</span>
-      </div>
-      <div class="project-body">
-        <h3 class="project-title">Subway Food Reservation Application</h3>
-        <p class="project-desc">A digital Platform base on the Korea's Famous Burger Fastfoods.</p>
-        <div class="project-tech">
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">API</span>
-          <span class="tech-tag">JSON</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="achievements">
-  <p class="section-label reveal">Recognition</p>
-  <h2 class="section-title reveal">Achievements</h2>
-  <div class="section-divider reveal"></div>
-
-  <div class="achievements-list">
-    <div class="achievement-item reveal">
-      <span class="achievement-year">2026</span>
-      <div>
-        <p class="achievement-name">Certificate in Advanced Frontend</p>
-        <p class="achievement-desc">Issued by Meta / Coursera — recognition of proficiency in modern frontend frameworks and responsive architecture.</p>
-      </div>
-    </div>
-    <div class="achievement-item reveal">
-      <span class="achievement-year">2025</span>
-      <div>
-       
-</section>
-
-<section id="contact">
-  <p class="section-label reveal">Get In Touch</p>
-  <h2 class="section-title reveal">Contact</h2>
-  <div class="section-divider reveal"></div>
-
-  <div class="contact-grid">
-    <div class="contact-info reveal">
-      <p>
-        I am always open to new opportunities, collaborations, and conversations. Feel free to reach out — I would love to hear from you.
-      </p>
-
-      <div class="contact-detail">
-        <div class="contact-detail-item">
-          <span class="lbl">Email Address</span>
-          <span class="val">palerkyla@yourportfolio.com</span>
-        </div>
-        <div class="contact-detail-item">
-          <span class="lbl">Phone Number</span>
-          <span class="val">+63 926 165 8813</span>
-        </div>
-        <div class="contact-detail-item">
-          <span class="lbl">GitHub</span>
-          <span class="val">paler.kyla10github.com/yourcreativelab</span>
-        </div>
-        <div class="contact-detail-item">
-          <span class="lbl">Location</span>
-          <span class="val">Cagayan de Oro, Philippines</span>
-        </div>
-      </div>
-
-      <a href="mailto:palerkyla10@yourportfolio.com" class="btn-primary">Send an Email</a>
-    </div>
-
-    <div class="contact-form reveal">
-      <div class="form-group">
-        <label for="name">Kyla Paler</label>
-        <input type="text" id="name" placeholder="Your full name" />
-      </div>
-      <div class="form-group">
-        <label for="email">Paler.kyla10@gmail.com</label>
-        <input type="email" id="email" placeholder="your@email.com" />
-      </div>
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" placeholder="What is this about?" />
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
-      </div>
-      <button class="btn-primary" id="sendMessageBtn">Send Message</button>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p class="footer-name">Kyla Paler</p>
-  <div class="footer-line"></div>
-  <p class="footer-copy">© 2026 &nbsp;·&nbsp; All Rights Reserved &nbsp;·&nbsp; Built with HTML, CSS & JavaScript</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
